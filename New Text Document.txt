@@ -1,0 +1,174 @@
+1. Remove Dupilicate
+
+
+
+Certainly! Let's break down the code step by step:
+
+The code includes the necessary header file bits/stdc++.h, which provides various standard libraries for input/output operations and data structures.
+
+Next, a class Node is defined. This class represents a single node in a linked list. It has two properties: value to store the value of the node, and next to store the pointer to the next node in the list.
+
+The node_print function is defined, which takes the head node of a linked list as input and prints all the values in the list. It iterates through the list starting from the head and prints each node's value.
+
+The removeAllDuplicates function is responsible for removing duplicate elements from the linked list. It uses an unordered_set named uniqueValues to keep track of unique values encountered so far. It initializes two pointers, current and previous, to iterate through the list.
+
+While the current pointer is not NULL, the function checks if the value of the current node exists in the uniqueValues set.
+If the value is found in the set, it means it's a duplicate node. In this case, the function adjusts the next pointers to skip the duplicate node by connecting the previous node directly to the next node. It also deletes the duplicate node from memory.
+If the value is not found in the set, it means it's a unique node. The function adds the value to the uniqueValues set, updates the previous pointer to the current node, and moves the current pointer to the next node.
+The sortTheLinkedList function sorts the linked list in ascending order. It uses a set data structure named sortedValues to store the unique values from the linked list. The current pointer is used to iterate through the list, and for each node, its value is inserted into the sortedValues set.
+
+After iterating through the list, a new sorted linked list is created. The function initializes two pointers, sortedLinkedList and tail, to manage the sorted linked list.
+It then iterates over the values in the sortedValues set and creates a new node for each value. The nodes are linked together by adjusting the next pointers. If the sortedLinkedList is empty, the new node becomes the head and tail of the sorted list. Otherwise, the new node is appended to the tail of the list, and the tail is updated.
+Finally, the function returns the sortedLinkedList, which represents the sorted linked list.
+In the main function, the code begins by initializing the head and tail pointers of the linked list as NULL.
+
+It then enters a loop that reads input values from the user until a value of -1 is encountered. For each input value, a new node is created with that value.
+
+If the head of the linked list is NULL, it means the list is empty. In this case, the new node becomes both the head and tail of the list.
+If the list is not empty, the new node is appended to the tail of the list, and the tail pointer is updated.
+After constructing the linked list, the removeAllDuplicates function is called to remove any duplicate elements from the list.
+
+Next, the sortTheLinkedList function is called to sort the linked list in ascending order.
+
+Finally, the node_print function is called to print the values of the sorted and duplicate-free linked list.
+
+That's a high-level overview of the code. It creates a linked list based on user input, removes duplicates, sorts the list, and then prints the resulting linked list.
+
+
+
+
+2. Remove Duplicate ||
+
+
+
+
+Certainly! Let's go through the code step by step and explain its functionality:
+
+The code includes the necessary header file bits/stdc++.h, which provides various standard libraries for input/output operations and data structures.
+
+The printTheLinkedList function is defined, which takes a linked list (list<int>) as input and prints all the values in the list. It uses a range-based for loop to iterate over each element in the list and prints the value.
+
+The removeDuplicates function takes a linked list (list<int>) as input and returns a new linked list that contains only unique values. It uses a set<int> named uniqueValue to keep track of unique values encountered so far. It iterates through the input list and inserts each value into the uniqueValue set.
+
+After iterating through the input list, a new list<int> named uniqueList is created to store the unique values.
+It then iterates over the unique values in the uniqueValue set and appends each value to the uniqueList using the push_back function.
+Finally, it returns the uniqueList, which contains only the unique values from the input list.
+In the main function, the code begins by declaring a linked list named myNodeList using the list<int> data structure.
+
+It enters a loop that reads input values from the user until a value of -1 is encountered. Each input value is appended to the myNodeList using the push_back function.
+
+After constructing the linked list, the removeDuplicates function is called to remove any duplicate elements from the list. The returned list containing unique values is assigned to a new list named uniqueList.
+
+The uniqueList is then sorted in ascending order using the sort function.
+
+Finally, the printTheLinkedList function is called to print the values of the sorted and duplicate-free linked list.
+
+That's the overall explanation of the code. It creates a linked list based on user input, removes duplicates, sorts the list, and then prints the resulting linked list.
+
+
+
+3 Palindrome
+
+
+Certainly! Let's break down the code step by step:
+
+The code includes the necessary header file bits/stdc++.h, which provides various standard libraries for input/output operations and data structures.
+
+A class Node is defined, representing a node in a linked list. It has two properties: val to store the value of the node, and next to store the pointer to the next node.
+
+The Palindrome function takes the head of a linked list as input and checks if the linked list is a palindrome (reads the same forwards and backward).
+
+It starts by creating a vector named values to store the values of the linked list nodes.
+The function iterates through the linked list starting from the head. It appends each node's value to the values vector.
+Two pointers, start and end, are initialized. start points to the beginning of the vector, and end points to the end of the vector.
+The function then enters a loop that compares values at the start and end indices of the values vector.
+If the values are not equal, it means the linked list is not a palindrome, and the function returns false.
+The start pointer is incremented, and the end pointer is decremented, and the loop continues until start becomes greater than or equal to end.
+If the loop completes without finding any unequal values, it means the linked list is a palindrome, and the function returns true.
+In the main function, the code initializes the head and tail pointers of the linked list as NULL.
+
+It then enters a loop that reads input values from the user until a value of -1 is encountered. For each input value, a new node is created with that value.
+
+If the head of the linked list is NULL, it means the list is empty. In this case, the new node becomes both the head and tail of the list.
+If the list is not empty, the new node is appended to the tail of the list, and the tail pointer is updated.
+After constructing the linked list, the Palindrome function is called to check if the linked list is a palindrome.
+
+If the linked list is a palindrome, the code outputs "YES". Otherwise, it outputs "NO".
+
+Finally, the main function returns 0 to indicate successful program execution.
+
+That's the overall explanation of the code. It constructs a linked list based on user input and checks if the list is a palindrome.
+
+
+
+4. Queries Again
+
+
+Certainly! Let's go through the code step by step and explain its functionality:
+
+The code includes the necessary header file bits/stdc++.h, which provides various standard libraries for input/output operations and data structures.
+
+The code defines two classes: LinkedListNode and DoublyLinkedList.
+
+The LinkedListNode class represents a node in a doubly linked list. It has three properties: value to store the value of the node, prev to store a pointer to the previous node, and next to store a pointer to the next node. The constructor initializes these properties to NULL.
+
+The DoublyLinkedList class represents a doubly linked list. It has two properties: head to store the pointer to the head node, and tail to store the pointer to the tail node. The constructor initializes both properties to NULL.
+
+The DoublyLinkedList class has a member function called insertNode that inserts a new node with a given value at a specified index in the linked list. The function takes two parameters: index and value.
+
+If the index is 0, it means the new node should be inserted at the beginning of the list. The function creates a new node and adjusts the pointers accordingly to make it the new head of the list.
+If the index is not 0, the function iterates through the list to find the node at the specified index. If found, it inserts the new node before that node by updating the pointers.
+If the index is out of bounds (greater than the current number of nodes), the function outputs "Invalid" and does not insert the new node.
+The DoublyLinkedList class also has two member functions: printListLeftToRight and printListRightToLeft. These functions traverse the linked list in the specified direction (left to right and right to left, respectively) and print the values of each node.
+
+In the main function, the code reads an integer Q from the user, which represents the number of queries to be performed.
+
+An instance of the DoublyLinkedList class named linkedList is created.
+
+The code enters a loop that runs Q times. In each iteration, it reads two integers X and V from the user.
+
+X represents the index at which the new node should be inserted.
+V represents the value of the new node.
+The insertNode function of the linkedList object is called with the provided X and V values to insert a new node at the specified index.
+
+After executing all the queries, the main function returns 0 to indicate successful program execution.
+
+That's the overall explanation of the code. It creates a doubly linked list and allows the user to insert nodes at specific indices. The code also prints the linked list from left to right and from right to left after each node insertion.
+
+
+
+5. Browser History
+
+
+
+Certainly! Let's go through the code step by step and explain its functionality:
+
+The code includes the necessary header file bits/stdc++.h, which provides various standard libraries for input/output operations and data structures.
+
+The code declares a list<string> called linkedList to store a sequence of strings. This will be used to represent a linked list.
+
+The code enters a loop that reads strings from the user using cin until the string "end" is encountered. Each string is then pushed back into the linkedList.
+
+The code reads an integer Q from the user, representing the number of queries to be performed.
+
+The code reads two strings command and addressToVisit from the user.
+
+The code initializes an iterator called current to the beginning of the linkedList.
+
+The code enters a loop that iterates through the linkedList until the current element pointed to by current matches the addressToVisit.
+
+The code outputs the value of addressToVisit using cout.
+
+The code enters another loop that runs Q-1 times (since the first query has already been processed).
+
+In each iteration, the code reads a string command from the user.
+
+If the command is "next", the code checks if incrementing current does not go beyond the end of the linkedList. If it doesn't, it outputs the value pointed to by current. Otherwise, it decrements current and outputs "Not Available".
+
+If the command is "prev", the code checks if current is not pointing to the beginning of the linkedList. If it isn't, it decrements current and outputs the value pointed to by current. Otherwise, it outputs "Not Available".
+
+If the command is "visit", the code reads a string addressToVisit from the user. It then searches for addressToVisit in the linkedList using the find function. If it is found, current is updated to point to the found address, and the value of addressToVisit is output. If it is not found, "Not Available" is output.
+
+After executing all the queries, the main function returns 0 to indicate successful program execution.
+
+That's the overall explanation of the code. It creates a linked list of strings and allows the user to navigate through the list using commands like "next", "prev", and "visit". The code outputs the visited addresses and handles cases where the desired address is not available or the navigation goes beyond the boundaries of the list.
